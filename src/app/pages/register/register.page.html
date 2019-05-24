@@ -1,0 +1,44 @@
+
+    <ion-header >
+      <ion-toolbar color="dark">
+        <ion-title>Registro</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+
+
+    <ion-content color="#2A3F54">
+        <form  #form="ngForm" (ngSubmit)="postData(nombre,correo,telefono,deviceToken)">
+          <ion-grid>
+            <ion-row color="primary" justify-content-center>
+              <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+                <div text-center padding>
+                  <h3 style="color:white;">Crea tu cuenta o ingresa al sistema</h3>
+                </div>
+                <div padding>
+                  <ion-item>
+                    <ion-input  name="nombre" type="text" placeholder="Nombre" [(ngModel)]="nombre" required></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-input name="correo" type="email" placeholder="tu@email.com" [(ngModel)]="correo" required></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-input name="telefono" type="text" placeholder="Telefono" [(ngModel)]="telefono" required></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-input name="deviceToken" type="text" placeholder="deviceToken" [(ngModel)]="deviceToken" value="{{tokensito}}" required></ion-input>
+                  </ion-item>
+                </div>
+                <div padding>
+                    {{tokensito}}
+                  <ion-button  size="large" type="submit" color="#C2D506;" expand="block">Enviar</ion-button>
+                </div>
+                
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        
+        </form>
+      </ion-content>
+ 
+

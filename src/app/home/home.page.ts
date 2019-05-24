@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { MenuController } from '@ionic/angular';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+constructor( private menuCtrl: MenuController,private router: Router) {}
+
+  ngOnInit() {}
+
+  verPicks(){
+    this.router.navigate(['list']);   
+ }
 }
