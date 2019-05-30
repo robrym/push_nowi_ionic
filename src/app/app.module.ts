@@ -17,6 +17,7 @@ import { Firebase } from '@ionic-native/firebase/ngx';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { FcmService } from './fcm.service';
+import { FormsModule } from '@angular/forms';
 
 const firebase = {
   // your firebase web config
@@ -40,7 +41,8 @@ const firebase = {
      HttpClientModule,
      IonicStorageModule.forRoot(),
      AngularFireModule.initializeApp(firebase), 
-     AngularFirestoreModule
+     AngularFirestoreModule,
+     FormsModule,
     ],
   providers: [
     StatusBar,

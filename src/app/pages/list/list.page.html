@@ -1,41 +1,30 @@
 <app-header></app-header>
     
+<ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="loadData($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
   
-    <ion-content >
 
         <!--<button ion-button (click)="postData()">Post Data</button>-->
       <ion-list>
         <ion-item *ngFor="let item of items">
             <ion-card>
                 <ion-card-header>
-                  <ion-card-subtitle center text-center>{{item.notification_date}}</ion-card-subtitle>
-                  <ion-card-title center text-center> {{item.notification_title}}</ion-card-title>
+                  
+                  <ion-card-title center text-left> <ion-icon name="megaphone"></ion-icon> {{item.notification_title}}</ion-card-title>
                 </ion-card-header>
                <ion-card-content >
                     <div center text-center [innerHtml]="item.notification_text"></div>
                 </ion-card-content>
+                <ion-row class="cardfooter">
+                    <ion-col>
+                        <ion-card-subtitle center text-center>{{item.notification_date}}</ion-card-subtitle>
+                    </ion-col>
+                  </ion-row>
               </ion-card>
        </ion-item>
-       <ion-item>
-          <ion-card>
-              <ion-card-header>
-               
-                <ion-card-title center text-center> Buscando Picks</ion-card-title>
-              </ion-card-header>
-             <ion-card-content >
-                       
-          <!-- Default Progressbar -->
-<ion-progress-bar></ion-progress-bar>
-
-<!-- Default Progressbar with 50 percent -->
-<ion-progress-bar value="5"></ion-progress-bar>
-
-<ion-progress-bar type="indeterminate"></ion-progress-bar>
-<ion-progress-bar type="indeterminate" reversed="true"></ion-progress-bar>
-       
-              </ion-card-content>
-            </ion-card>
-     </ion-item>
+  
 
 
   

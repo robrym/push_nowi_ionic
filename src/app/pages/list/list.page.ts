@@ -15,20 +15,25 @@ export class ListPage implements OnInit {
   data: Observable<any>;
 
   constructor( private http: HttpClient ) { 
-    this.loadData();
+    this.loadData( event );
   }
 
   ngOnInit() {
     
   }
 
-  loadData(){
+  loadData( event ){
     var url = "http://nowipicks.com/push/ios/getPicks.php?cda=8RXC-N3E9-LRDX-MWZ5";
     this.data = this.http.get(url);
     this.data.subscribe(result =>{
       this.items = result;
       console.log(result);
     })
+
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      event.target.complete();
+    }, 2000);
   }
 
   

@@ -32,7 +32,7 @@ export class RegisterPage implements OnInit {
 
   ngOnInit() {
 
-    if (this.platform.is('cordova')) {
+    //if (this.platform.is('cordova')) {
 
 
       this.fcm.subscribeToTopic('people');
@@ -59,11 +59,11 @@ export class RegisterPage implements OnInit {
       });
 
       // this.fcm.unsubscribeFromTopic('marketing');
-    } else {
+    /*} else {
       // You're testing in browser, do nothing or mock the plugins' behaviour.
       //
       // var url: string = 'assets/mock-images/image.jpg';
-    }
+    }*/
   }
 
   async presentToast(mensaje) {
