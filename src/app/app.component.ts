@@ -64,7 +64,7 @@ export class AppComponent {
         //alert("On Token Refresh:"+token);
         if(token){
           this.storage.set('tkn',token);
-          alert('Variable Guardada');
+         // alert('Variable Guardada');
         }
         //this.tokensito2 = token;
       });

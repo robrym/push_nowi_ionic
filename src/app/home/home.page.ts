@@ -73,10 +73,10 @@ this.storage.get('tkn').then((data) => {
   }
   async login() {
     this.authService.login();
-    
+   // this.router.navigate(['list']);   
   }
 
-  obtenerToken(){
+ obtenerToken(){
   alert(this.tokensito3);
     
   }
@@ -119,7 +119,7 @@ this.storage.get('tkn').then((data) => {
        if(estatusReg === '1'){
    
         this.login();
-        this.verPicks();
+       this.verPicks();
        }
 
        this.nombre = "";

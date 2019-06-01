@@ -10,9 +10,10 @@
       <ion-list>
         <ion-item *ngFor="let item of items">
             <ion-card>
-                <ion-card-header>
+                <ion-card-header class="{{item.notification_color}}">
                   
-                  <ion-card-title center text-left> <ion-icon name="megaphone"></ion-icon> {{item.notification_title}}</ion-card-title>
+                  
+                  <ion-card-title center text-left class="blanco">  <ion-icon name="{{item.notification_icon}}"></ion-icon> {{item.notification_title}}</ion-card-title>
                 </ion-card-header>
                <ion-card-content >
                     <div center text-center [innerHtml]="item.notification_text"></div>
